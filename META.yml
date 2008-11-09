@@ -1,0 +1,28 @@
+---
+abstract: 'subroutine signatures with no source filter'
+author:
+  - 'Florian Ragwitz <rafl@debian.org>'
+build_requires:
+  B::Hooks::OP::Check: 0.13
+  B::Hooks::Parser: 0.07
+configure_requires:
+  B::Hooks::OP::Check: 0.13
+  B::Hooks::Parser: 0.07
+  ExtUtils::Depends: 0
+distribution_type: module
+generated_by: 'Module::Install version 0.77'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: signatures
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  B::Hooks::OP::Check: 0.13
+  B::Hooks::Parser: 0.07
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.01

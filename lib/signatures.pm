@@ -9,7 +9,7 @@ use B::Hooks::OP::Check;
 use B::Hooks::OP::PPAddr;
 use B::Hooks::EndOfScope;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 XSLoader::load(__PACKAGE__, $VERSION);
 
@@ -39,7 +39,7 @@ sub setup_for {
 
     my $old_warn = $SIG{__WARN__};
     $SIG{__WARN__} = sub {
-        if ($_[0] !~ /^Illegal character in prototype for /) {
+        if ($_[0] !~ /^(?:(?:Illegal character in prototype)|(?:Prototype after '.')) for /) {
             $old_warn ? $old_warn->(@_) : warn @_;
         }
     };

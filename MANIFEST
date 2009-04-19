@@ -18,6 +18,7 @@ README
 signatures.xs
 t/anon.t
 t/basic.t
+t/bug_junctions.t
 t/eval.t
 t/proto.t
 t/subclass.t

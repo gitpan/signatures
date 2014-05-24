@@ -1,17 +1,25 @@
 use strict;
 use warnings;
-
 package signatures;
+BEGIN {
+  $signatures::AUTHORITY = 'cpan:FLORA';
+}
+# git description: v0.07-9-g5eecfaa
+$signatures::VERSION = '0.08';
+# ABSTRACT: Subroutine signatures with no source filter
 
 use XSLoader;
-use B::Hooks::Parser;
-use B::Hooks::OP::Check;
+use B::Hooks::Parser 0.07;
+use B::Hooks::OP::Check 0.17;
 use B::Hooks::OP::PPAddr;
-use B::Hooks::EndOfScope;
+use B::Hooks::EndOfScope 0.08;
 
-our $VERSION = '0.07';
-
-XSLoader::load(__PACKAGE__, $VERSION);
+XSLoader::load(
+    __PACKAGE__,
+    exists $signatures::{VERSION}
+    ? ${ $signatures::{VERSION} }
+    : (),
+);
 
 {
     my %pkgs;
@@ -92,9 +100,17 @@ sub inject {
 
 __END__
 
+=pod
+
+=encoding UTF-8
+
 =head1 NAME
 
-signatures - subroutine signatures with no source filter
+signatures - Subroutine signatures with no source filter
+
+=head1 VERSION
+
+version 0.08
 
 =head1 SYNOPSIS
 
@@ -161,6 +177,8 @@ is parsing and extracted C<$prototype>.
 The default implementation calls C<proto_unwrap> with the prototype and passes
 the returned value and the offset to C<inject>.
 
+=for Pod::Coverage setup setup_for teardown teardown_for
+
 =head1 BUGS
 
 =over 4
@@ -192,21 +210,48 @@ L<Perl6::Subs>
 
 L<Perl6::Parameters>
 
-=head1 AUTHOR
-
-Florian Ragwitz E<lt>rafl@debian.orgE<gt>
-
 =head1 THANKS
+
+=for stopwords Moritz Lenz Steffen Schwigon
 
 Moritz Lenz and Steffen Schwigon for documentation review and
 improvement.
 
+=head1 AUTHOR
+
+Florian Ragwitz <rafl@debian.org>
+
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2008  Florian Ragwitz
+This software is copyright (c) 2008 by Florian Ragwitz.
 
-This module is free software.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
-You may distribute it under the same license as Perl itself.
+=head1 CONTRIBUTORS
+
+=over 4
+
+=item *
+
+Alex Kapranoff <alex@kapranoff.ru>
+
+=item *
+
+Alexandr Ciornii <alexchorny@gmail.com>
+
+=item *
+
+Karen Etheridge <ether@cpan.org>
+
+=item *
+
+Peter Martini <PeterCMartini@GMail.com>
+
+=item *
+
+Steffen Schwigon <ss5@renormalist.net>
+
+=back
 
 =cut

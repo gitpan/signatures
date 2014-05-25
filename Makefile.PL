@@ -15,13 +15,13 @@ my %WriteMakefileArgs = (
   "BUILD_REQUIRES" => {
     "B::Hooks::OP::Check" => "0.17",
     "B::Hooks::OP::PPAddr" => "0.03",
-    "B::Hooks::Parser" => "0.07",
+    "B::Hooks::Parser" => "0.12",
     "ExtUtils::Depends" => "0.302"
   },
   "CONFIGURE_REQUIRES" => {
     "B::Hooks::OP::Check" => "0.17",
     "B::Hooks::OP::PPAddr" => "0.03",
-    "B::Hooks::Parser" => "0.07",
+    "B::Hooks::Parser" => "0.12",
     "ExtUtils::Depends" => "0.302",
     "ExtUtils::MakeMaker" => "6.30"
   },
@@ -33,7 +33,7 @@ my %WriteMakefileArgs = (
     "B::Hooks::EndOfScope" => "0.08",
     "B::Hooks::OP::Check" => "0.17",
     "B::Hooks::OP::PPAddr" => "0.03",
-    "B::Hooks::Parser" => "0.07",
+    "B::Hooks::Parser" => "0.12",
     "XSLoader" => 0,
     "strict" => 0,
     "warnings" => 0
@@ -47,7 +47,7 @@ my %WriteMakefileArgs = (
     "vars" => 0,
     "version" => 0
   },
-  "VERSION" => "0.08",
+  "VERSION" => "0.09",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -71,7 +71,7 @@ my %FallbackPrereqs = (
   "B::Hooks::EndOfScope" => "0.08",
   "B::Hooks::OP::Check" => "0.17",
   "B::Hooks::OP::PPAddr" => "0.03",
-  "B::Hooks::Parser" => "0.07",
+  "B::Hooks::Parser" => "0.12",
   "ExtUtils::Depends" => "0.302",
   "ExtUtils::MakeMaker" => 0,
   "File::Spec::Functions" => 0,

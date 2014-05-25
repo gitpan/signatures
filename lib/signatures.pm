@@ -4,12 +4,12 @@ package signatures;
 BEGIN {
   $signatures::AUTHORITY = 'cpan:FLORA';
 }
-# git description: v0.07-9-g5eecfaa
-$signatures::VERSION = '0.08';
+# git description: v0.08-1-g1cfbe5b
+$signatures::VERSION = '0.09';
 # ABSTRACT: Subroutine signatures with no source filter
 
 use XSLoader;
-use B::Hooks::Parser 0.07;
+use B::Hooks::Parser 0.12;
 use B::Hooks::OP::Check 0.17;
 use B::Hooks::OP::PPAddr;
 use B::Hooks::EndOfScope 0.08;
@@ -110,7 +110,7 @@ signatures - Subroutine signatures with no source filter
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 

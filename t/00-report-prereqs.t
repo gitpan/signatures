@@ -47,7 +47,7 @@ my $static_prereqs = do { my $x = {
                     'requires' => {
                                     'B::Hooks::OP::Check' => '0.17',
                                     'B::Hooks::OP::PPAddr' => '0.03',
-                                    'B::Hooks::Parser' => '0.07',
+                                    'B::Hooks::Parser' => '0.12',
                                     'ExtUtils::Depends' => '0.302'
                                   }
                   },
@@ -55,7 +55,7 @@ my $static_prereqs = do { my $x = {
                         'requires' => {
                                         'B::Hooks::OP::Check' => '0.17',
                                         'B::Hooks::OP::PPAddr' => '0.03',
-                                        'B::Hooks::Parser' => '0.07',
+                                        'B::Hooks::Parser' => '0.12',
                                         'ExtUtils::Depends' => '0.302',
                                         'ExtUtils::MakeMaker' => '6.30'
                                       }
@@ -94,7 +94,7 @@ my $static_prereqs = do { my $x = {
                                       'B::Hooks::EndOfScope' => '0.08',
                                       'B::Hooks::OP::Check' => '0.17',
                                       'B::Hooks::OP::PPAddr' => '0.03',
-                                      'B::Hooks::Parser' => '0.07',
+                                      'B::Hooks::Parser' => '0.12',
                                       'XSLoader' => '0',
                                       'perl' => '5.006',
                                       'strict' => '0',

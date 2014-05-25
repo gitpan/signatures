@@ -24,7 +24,7 @@
          "requires" : {
             "B::Hooks::OP::Check" : "0.17",
             "B::Hooks::OP::PPAddr" : "0.03",
-            "B::Hooks::Parser" : "0.07",
+            "B::Hooks::Parser" : "0.12",
             "ExtUtils::Depends" : "0.302"
          }
       },
@@ -32,7 +32,7 @@
          "requires" : {
             "B::Hooks::OP::Check" : "0.17",
             "B::Hooks::OP::PPAddr" : "0.03",
-            "B::Hooks::Parser" : "0.07",
+            "B::Hooks::Parser" : "0.12",
             "ExtUtils::Depends" : "0.302",
             "ExtUtils::MakeMaker" : "6.30"
          }
@@ -71,7 +71,7 @@
             "B::Hooks::EndOfScope" : "0.08",
             "B::Hooks::OP::Check" : "0.17",
             "B::Hooks::OP::PPAddr" : "0.03",
-            "B::Hooks::Parser" : "0.07",
+            "B::Hooks::Parser" : "0.12",
             "XSLoader" : "0",
             "perl" : "5.006",
             "strict" : "0",
@@ -97,7 +97,7 @@
    "provides" : {
       "signatures" : {
          "file" : "lib/signatures.pm",
-         "version" : "0.08"
+         "version" : "0.09"
       }
    },
    "release_status" : "stable",
@@ -113,7 +113,7 @@
          "web" : "https://github.com/karenetheridge/signatures"
       }
    },
-   "version" : "0.08",
+   "version" : "0.09",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.019011"
@@ -720,7 +720,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "v0.08",
+                  "tag" : "v0.09",
                   "tag_format" : "v%v%t",
                   "tag_message" : "v%v%t",
                   "time_zone" : "local"

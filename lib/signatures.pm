@@ -1,13 +1,10 @@
 use strict;
 use warnings;
 package signatures;
-BEGIN {
-  $signatures::AUTHORITY = 'cpan:FLORA';
-}
-# git description: v0.08-1-g1cfbe5b
-$signatures::VERSION = '0.09';
-# ABSTRACT: Subroutine signatures with no source filter
+# git description: v0.09-9-g1b4bc1b
 
+# ABSTRACT: Subroutine signatures with no source filter
+{ our $VERSION = '0.10'; }
 use XSLoader;
 use B::Hooks::Parser 0.12;
 use B::Hooks::OP::Check 0.17;
@@ -17,8 +14,8 @@ use B::Hooks::EndOfScope 0.08;
 XSLoader::load(
     __PACKAGE__,
     exists $signatures::{VERSION}
-    ? ${ $signatures::{VERSION} }
-    : (),
+        ? ${ $signatures::{VERSION} }
+        : (),
 );
 
 {
@@ -110,7 +107,7 @@ signatures - Subroutine signatures with no source filter
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 SYNOPSIS
 
@@ -230,15 +227,9 @@ the same terms as the Perl 5 programming language system itself.
 
 =head1 CONTRIBUTORS
 
+=for stopwords Karen Etheridge Peter Martini Alexandr Ciornii Father Chrysostomos Alex Kapranoff Steffen Schwigon
+
 =over 4
-
-=item *
-
-Alex Kapranoff <alex@kapranoff.ru>
-
-=item *
-
-Alexandr Ciornii <alexchorny@gmail.com>
 
 =item *
 
@@ -247,6 +238,18 @@ Karen Etheridge <ether@cpan.org>
 =item *
 
 Peter Martini <PeterCMartini@GMail.com>
+
+=item *
+
+Alexandr Ciornii <alexchorny@gmail.com>
+
+=item *
+
+Father Chrysostomos <sprout@cpan.org>
+
+=item *
+
+Alex Kapranoff <alex@kapranoff.ru>
 
 =item *
 

@@ -41,7 +41,7 @@
       },
       "develop" : {
          "recommends" : {
-            "Dist::Zilla::PluginBundle::Author::ETHER" : "0.081"
+            "Dist::Zilla::PluginBundle::Author::ETHER" : "0.082"
          },
          "requires" : {
             "Devel::PPPort" : "3.23",
@@ -62,9 +62,9 @@
             "Dist::Zilla::Plugin::Git::Check" : "2.025",
             "Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch" : "0.004",
             "Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts" : "0",
-            "Dist::Zilla::Plugin::Git::Commit" : "2.020",
+            "Dist::Zilla::Plugin::Git::Commit" : "0",
             "Dist::Zilla::Plugin::Git::Contributors" : "0.004",
-            "Dist::Zilla::Plugin::Git::Describe" : "0",
+            "Dist::Zilla::Plugin::Git::Describe" : "0.004",
             "Dist::Zilla::Plugin::Git::GatherDir" : "2.016",
             "Dist::Zilla::Plugin::Git::NextVersion" : "0",
             "Dist::Zilla::Plugin::Git::Push" : "0",
@@ -87,7 +87,7 @@
             "Dist::Zilla::Plugin::MojibakeTests" : "0",
             "Dist::Zilla::Plugin::NextRelease" : "4.300018",
             "Dist::Zilla::Plugin::PPPort" : "0",
-            "Dist::Zilla::Plugin::PkgVersion" : "5.026",
+            "Dist::Zilla::Plugin::PkgVersion" : "5.010",
             "Dist::Zilla::Plugin::PodCoverageTests" : "0",
             "Dist::Zilla::Plugin::PodSyntaxTests" : "0",
             "Dist::Zilla::Plugin::PodWeaver" : "4.005",
@@ -159,7 +159,7 @@
    "provides" : {
       "signatures" : {
          "file" : "lib/signatures.pm",
-         "version" : "0.10"
+         "version" : "0.11"
       }
    },
    "release_status" : "stable",
@@ -175,7 +175,7 @@
          "web" : "https://github.com/karenetheridge/signatures"
       }
    },
-   "version" : "0.10",
+   "version" : "0.11",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.021006"
@@ -263,7 +263,7 @@
                "Dist::Zilla::Plugin::GatherDir" : {
                   "exclude_filename" : [
                      "Makefile.PL",
-                     "README.md",
+                     "README.pod",
                      "ppport.h",
                      "LICENSE",
                      "CONTRIBUTING"
@@ -448,14 +448,19 @@
             "version" : "2.000005"
          },
          {
+            "class" : "Dist::Zilla::Plugin::Git::Describe",
+            "config" : {
+               "Dist::Zilla::Plugin::Git::Describe" : {
+                  "on_package_line" : "1"
+               }
+            },
+            "name" : "@Author::ETHER/Git::Describe",
+            "version" : "0.004"
+         },
+         {
             "class" : "Dist::Zilla::Plugin::PkgVersion",
             "name" : "@Author::ETHER/PkgVersion",
             "version" : "5.029"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::Git::Describe",
-            "name" : "@Author::ETHER/Git::Describe",
-            "version" : "0.003"
          },
          {
             "class" : "Dist::Zilla::Plugin::PodWeaver",
@@ -469,82 +474,82 @@
                      {
                         "class" : "Pod::Weaver::Plugin::EnsurePod5",
                         "name" : "@CorePrep/EnsurePod5",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Plugin::H1Nester",
                         "name" : "@CorePrep/H1Nester",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Plugin::SingleEncoding",
                         "name" : "@Default/SingleEncoding",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Name",
                         "name" : "@Default/Name",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Version",
                         "name" : "@Default/Version",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Region",
                         "name" : "@Default/prelude",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Generic",
                         "name" : "SYNOPSIS",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Generic",
                         "name" : "DESCRIPTION",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Generic",
                         "name" : "OVERVIEW",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Collect",
                         "name" : "ATTRIBUTES",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Collect",
                         "name" : "METHODS",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Collect",
                         "name" : "FUNCTIONS",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Leftovers",
                         "name" : "@Default/Leftovers",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Region",
                         "name" : "@Default/postlude",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Authors",
                         "name" : "@Default/Authors",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Legal",
                         "name" : "@Default/Legal",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Contributors",
@@ -554,7 +559,7 @@
                      {
                         "class" : "Pod::Weaver::Plugin::Transformer",
                         "name" : "-Transformer",
-                        "version" : "4.009"
+                        "version" : "4.010"
                      }
                   ]
                }
@@ -624,7 +629,7 @@
                }
             },
             "name" : "@Author::ETHER/MetaProvides::Package",
-            "version" : "2.001002"
+            "version" : "2.002000"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaConfig",
@@ -853,9 +858,7 @@
             "class" : "Dist::Zilla::Plugin::Git::Commit",
             "config" : {
                "Dist::Zilla::Plugin::Git::Commit" : {
-                  "add_files_in" : [
-                     "."
-                  ],
+                  "add_files_in" : [],
                   "commit_msg" : "%N-%v%t%n%n%c",
                   "time_zone" : "local"
                },
@@ -884,7 +887,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "v0.10",
+                  "tag" : "v0.11",
                   "tag_format" : "v%v%t",
                   "tag_message" : "v%v%t",
                   "time_zone" : "local"
@@ -899,7 +902,7 @@
          {
             "class" : "Dist::Zilla::Plugin::GitHub::Update",
             "name" : "@Author::ETHER/GitHub::Update",
-            "version" : "0.38"
+            "version" : "0.39"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Push",

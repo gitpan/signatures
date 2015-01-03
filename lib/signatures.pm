@@ -1,10 +1,8 @@
 use strict;
 use warnings;
-package signatures;
-# git description: v0.09-9-g1b4bc1b
-
+package signatures; # git description: v0.10-1-gac9726f
 # ABSTRACT: Subroutine signatures with no source filter
-{ our $VERSION = '0.10'; }
+$signatures::VERSION = '0.11';
 use XSLoader;
 use B::Hooks::Parser 0.12;
 use B::Hooks::OP::Check 0.17;
@@ -107,7 +105,7 @@ signatures - Subroutine signatures with no source filter
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 
